@@ -43,7 +43,7 @@ app.use(errorHandlerMiddleware);
 const port = process.env.PORT || 8000;
 
 try {
-  await mongoose.connect(process.env.DATABASE_LOCAL);
+  await mongoose.connect(process.env.DATABASE);
   app.listen(port, () => {
     console.log(`server running on PORT ${port}....`);
   });
